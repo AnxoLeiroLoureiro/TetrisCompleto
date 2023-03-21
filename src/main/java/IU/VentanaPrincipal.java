@@ -26,6 +26,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     boolean pause = false;
     MODELO.Xogo xogo = new MODELO.Xogo(this);
 
+    public Timer getTimer() {
+        return timer;
+    }
+    
     Timer timer = new Timer(1000, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -330,10 +334,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     public void borrarCadrado(JLabel lblCadrado) {
-       if(xogo.cadradosChan.size() == 10){
-           xogo.borrarLinasCompletas();
-           
-       }
+        panelXogo.remove(lblCadrado);
     }
 
     public void mostrarNumeroLinas(int numeroLinas) {

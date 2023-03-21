@@ -31,17 +31,32 @@ public class FichaL extends Ficha {
 
         switch (posicion) {
             case 0 -> {
-                rotar0();
+                if (super.xogo.ePosicionValida(posicion, posicion) && c1.x <0) {
+                    rotar0();
+                } else if(super.xogo.ePosicionValida(posicion, posicion) && c1.x != 0){
+                    rotar0();
+                }
 
             }
             case 1 -> {
-                rotar1();
+                if (super.xogo.ePosicionValida(posicion, posicion)) {
+
+                    rotar1();
+                }
             }
             case 2 -> {
-                rotar2();
+
+                if (super.xogo.ePosicionValida(posicion, posicion) && c1.x >450) {
+                    rotar2();
+                } else if(super.xogo.ePosicionValida(posicion, posicion) && c1.x != 450){
+                    rotar2();
+                }
             }
             case 3 -> {
-                rotar3();
+
+                if (super.xogo.ePosicionValida(posicion, posicion)) {
+                    rotar3();
+                }
             }
             default -> {
             }

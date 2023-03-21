@@ -26,7 +26,7 @@ public abstract class Ficha {
         Iterator<Cadrado> iter = cadrados.iterator();
         while (iter.hasNext()) {
             Cadrado cmover = iter.next();
-            if (cmover.lblCadrado.getX() == xogo.MAX_X) {
+            if (cmover.lblCadrado.getX() == xogo.getMAX_X()) {
                 mover = false;
             }
         }
@@ -54,6 +54,14 @@ public abstract class Ficha {
             System.out.println(cmover.x + ", " + "" + cmover.y);
         }
         return true;
+    }
+
+    public ArrayList<Cadrado> getCadrados() {
+        return cadrados;
+    }
+
+    public Xogo getXogo() {
+        return xogo;
     }
 
     public abstract boolean rotar();

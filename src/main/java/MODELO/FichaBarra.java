@@ -31,7 +31,11 @@ public class FichaBarra extends Ficha {
         boolean rotar = true;
         switch (posicion) {
             case 0 -> {
-                rotar0();
+                if (super.xogo.ePosicionValida(posicion, posicion) && c1.x < 0 && c2.x < 0 && c2.x < 400 && c3.x > 450 && c4.x > 450) {
+                    rotar0();
+                } else if (super.xogo.ePosicionValida(posicion, posicion) && c1.x != 0 && c2.x != 0 && c2.x != 400 && c3.x != 450 && c4.x != 450) {
+                    rotar0();
+                }
             }
             case 1 -> {
                 rotar1();
